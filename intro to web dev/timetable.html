@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Time Table - Section 3AB(70)</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: "Times New Roman", serif;
+            background-color: white;
+        }
+
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 14px;
+        }
+
+        .timetable th,
+        .timetable td {
+            border: 1px solid #222;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px;
+        }
+
+        /* University Header */
+        .university {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        .institute {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .department {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .programme {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* Information row */
+        .info {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .section {
+            text-align: left !important;
+            padding-left: 60px !important;
+        }
+
+        .advisor {
+            text-align: center;
+        }
+
+        /* Lecture / time headers */
+        .lecture-header {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .time-header {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* Day column */
+        .day {
+            width: 7%;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* Time columns */
+        .period {
+            width: 9.3%;
+        }
+
+        /* Empty cells */
+        .empty {
+            background-color: white;
+        }
+
+        /* Subject cells */
+        .subject {
+            background-color: #fff1c9;
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+        /* Lab cells */
+        .lab {
+            background-color: #d9d9d9;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .lab-container {
+            padding: 0 !important;
+        }
+
+        .lab-row {
+            padding: 4px;
+            border-bottom: 1px solid #222;
+        }
+
+        .lab-row:last-child {
+            border-bottom: none;
+        }
+
+        /* Group cells */
+        .group {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .group div {
+            border-bottom: 1px solid #222;
+        }
+
+        .group div:last-child {
+            border-bottom: none;
+        }
+
+        /* Height of timetable rows */
+        .schedule-row {
+            height: 78px;
+        }
+
+        .small-row {
+            height: 65px;
+        }
+
+        /* Bottom heading */
+        .bottom-heading {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            body {
+                padding: 5px;
+            }
+
+            .timetable {
+                font-size: 11px;
+            }
+
+            .university {
+                font-size: 15px;
+            }
+
+            .institute,
+            .department,
+            .programme {
+                font-size: 12px;
+            }
+
+            .time-header {
+                font-size: 11px;
+            }
+
+            .subject {
+                font-size: 11px;
+            }
+
+            .group {
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<table class="timetable">
+
+    <!-- ================= HEADER ================= -->
+
+
+    <tr>
+        <th colspan="4" class="programme">
+            Time Table: Odd Semester Programme
+        </th>
+
+        <th colspan="5" class="programme">
+            Course: Bachelor of Technology
+        </th>
+
+        <th colspan="2" class="programme">
+            Session: 2026-2027
+        </th>
+
+        <th></th>
+    </tr>
+
+    <!-- Information -->
+
+    <tr class="info">
+
+        <td colspan="2" class="section">
+            Section: 3AB(70)<br>
+            AI &amp; DA
+        </td>
+
+        <td colspan="2">
+            Semester: V
+        </td>
+
+
+    </tr>
+
+    <!-- Lecture Number -->
+
+    <tr class="lecture-header">
+
+        <th>
+            Lecture #
+        </th>
+
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+
+        <th></th>
+
+    </tr>
+
+    <!-- Time -->
+
+    <tr class="time-header">
+
+        <th>
+            Day/Time
+        </th>
+
+        <th>08:00-09:00</th>
+        <th>09:00-10:00</th>
+        <th>10:00-11:00</th>
+        <th>11:00-12:00</th>
+        <th>12:00-01:00</th>
+        <th>01:00-02:00</th>
+        <th>02:00-03:00</th>
+        <th>03:00-04:00</th>
+        <th>04:00-05:00</th>
+        <th>05:00-06:00</th>
+
+        <th></th>
+
+    </tr>
+
+    <tr class="schedule-row">
+
+        <td class="day">
+            Monday
+        </td>
+
+        <td class="empty"></td>
+        <td class="empty"></td>
+
+        <td colspan="2" class="subject">
+            BCSE1251<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSC0011<br>
+            ABVII-201
+        </td>
+
+        <td class="empty"></td>
+
+        <td class="subject">
+            BCSE1008<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSC0007<br>
+            ABVII-201
+        </td>
+
+        <td colspan="2" class="subject">
+            PCPH0002<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+    </tr>
+
+    <tr class="schedule-row">
+
+        <td class="day">
+            Tuesday
+        </td>
+
+        <td></td>
+        <td></td>
+
+        <td class="subject">
+            PGDH0001<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSC0011<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSE1008<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+        <td colspan="2" class="subject">
+            BCSE1251<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+        <td></td>
+
+        <td></td>
+
+    </tr>
+
+    <tr class="schedule-row">
+
+        <td class="day">
+            Wednesday
+        </td>
+
+        <td></td>
+        <td></td>
+
+        <td colspan="2" class="subject">
+            BCSE0281<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSC0007<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+        <td class="subject">
+            PQRH0001<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            3AB1/BCSC0011<br>
+            ABVII-201
+        </td>
+
+        <td colspan="2" class="group">
+
+            <div>
+                3AB1/BCSE0807/ABI-128A
+            </div>
+
+            <div>
+                3AB2/BCSE0807/ABI-128B
+            </div>
+
+            <div>
+                3AB3/BCSE0807/ABI-119
+            </div>
+
+        </td>
+
+        <td></td>
+
+    </tr>
+
+    <tr class="schedule-row">
+
+        <td class="day">
+            Thursday
+        </td>
+
+        <td></td>
+        <td></td>
+
+        <td colspan="2" class="subject">
+            BCSE0281<br>
+            ABVII-201
+        </td>
+
+        <td colspan="2" class="lab-container lab">
+
+            <div class="lab-row">
+                3AB1/BCSC0806/ABII-5002
+            </div>
+
+            <div class="lab-row">
+                3AB2/BCSC0806/ABII-5004
+            </div>
+
+            <div class="lab-row">
+                3AB3/BCSC0806/ABII-5005
+            </div>
+
+        </td>
+
+        <td></td>
+
+        <td class="subject">
+            3AB2/BCSC0011<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSC0007<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            PVRH0001<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+    </tr>
+
+    <tr class="schedule-row">
+
+        <td class="day">
+            Friday
+        </td>
+
+        <td></td>
+        <td></td>
+
+        <td class="subject">
+            PQRH0001<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSC0011<br>
+            ABVII-201
+        </td>
+
+        <td class="subject">
+            BCSE1008<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+        <td class="subject">
+            3AB3/BCSC0011<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+        <td colspan="2" class="subject">
+            PCPH0002<br>
+            ABVII-201
+        </td>
+
+        <td></td>
+
+    </tr>
+
+    <tr class="schedule-row">
+
+        <td class="day">
+            Saturday
+        </td>
+
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td></td>
+
+    </tr>
+
+  
+
+</table>
+
+</body>
+</html>
