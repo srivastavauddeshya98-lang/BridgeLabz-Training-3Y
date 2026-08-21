@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #4a90e2;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  box-sizing: border-box;
+}
