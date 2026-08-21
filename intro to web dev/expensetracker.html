@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Expense Tracker</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .stat-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 16px 20px;
+    flex: 1;
+  }
+
+  .stat-label {
+    color: #a0a0a0;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 24px 0;
+  }
+
+  h2 {
+    font-size: 15px;
+    color: #a0a0a0;
+    font-weight: normal;
+    margin-bottom: 12px;
+  }
+
+  .add-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  input, select, button {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  input::placeholder {
+    color: #888;
+  }
+
+  button {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color: #2a2a2a;
+  }
+
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .filters button {
+    border-radius: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    text-align: left;
+    color: #a0a0a0;
+    font-weight: normal;
+    padding: 10px 8px;
+    border-bottom: 1px solid #333;
+  }
+
+  td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #262626;
+  }
+
+  .amount {
+    text-align: right;
+  }
+
+  .delete-icon {
+    text-align: right;
+    color: #d85a30;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Expense tracker</h1>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-label">Total spent</div>
+      <div class="stat-value">2,450</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Entries</div>
+      <div class="stat-value">14</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Top category</div>
+      <div class="stat-value">Food</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Add expense</h2>
+  <div class="add-row">
+    <input type="text" placeholder="Expense name">
+    <input type="text" placeholder="Amount">
+    <select>
+      <option>Category</option>
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Shopping</option>
+    </select>
+    <input type="text" placeholder="Date">
+    <button type="button">Add</button>
+  </div>
+
+  <div class="filters">
+    <button type="button">All</button>
+    <button type="button">Food</button>
+    <button type="button">Travel</button>
+    <button type="button">Shopping</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th class="amount">Amount</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Groceries</td>
+        <td>Food</td>
+        <td>Aug 10</td>
+        <td class="amount">850</td>
+        <td class="delete-icon">&#128465;</td>
+      </tr>
+      <tr>
+        <td>Bus ticket</td>
+        <td>Travel</td>
+        <td>Aug 11</td>
+        <td class="amount">120</td>
+        <td class="delete-icon">&#128465;</td>
+      </tr>
+      <tr>
+        <td>Shoes</td>
+        <td>Shopping</td>
+        <td>Aug 12</td>
+        <td class="amount">1480</td>
+        <td class="delete-icon">&#128465;</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
