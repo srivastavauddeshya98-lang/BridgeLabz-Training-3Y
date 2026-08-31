@@ -1,0 +1,46 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #eae6df;
+    padding: 30px;
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fdfbf7;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.headline {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    text-align: center;
+    column-span: all; /* spans all columns */
+    margin-bottom: 20px;
+}
+
+.columns {
+    column-count: 3;
+    column-gap: 30px;
+    font-family: Georgia, serif;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.columns p {
+    margin-bottom: 15px;
+}
+
+.float-img {
+    float: left;
+    margin: 0 15px 10px 0;
+    border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+    .columns {
+        column-count: 1;
+    }
+}

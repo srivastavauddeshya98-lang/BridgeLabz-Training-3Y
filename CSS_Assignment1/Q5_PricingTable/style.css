@@ -1,0 +1,84 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* equal height boxes */
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    width: 260px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.plan.popular {
+    border: 3px solid #22313f;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.plan h2 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+}
+
+.plan ul {
+    list-style: none;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.plan ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #22313f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1a252f;
+}

@@ -1,0 +1,119 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: Arial, sans-serif; color: #222; }
+
+/* Sticky nav */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(34, 49, 63, 0.95); /* rgba color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 100;
+}
+
+.sticky-header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Hero section - relative positioning + gradient overlay */
+.hero {
+    position: relative;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                       url('https://picsum.photos/1600/900');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    position: absolute; /* absolute positioning inside relative parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* About - two columns via flex */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%;
+    outline: 1px dashed #ccc; /* demonstrates outline property */
+}
+
+.about-text { flex: 1; }
+
+.about-img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 3px solid #22313f;
+}
+
+/* Services - grid of 3 boxes */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 10%;
+    background-color: #f4f4f4;
+}
+
+.service-box {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+/* Contact section */
+.contact {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto 0;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact button {
+    padding: 12px;
+    background-color: #22313f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer - fixed positioning note: using static/relative here for normal flow */
+.footer {
+    background-color: #22313f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

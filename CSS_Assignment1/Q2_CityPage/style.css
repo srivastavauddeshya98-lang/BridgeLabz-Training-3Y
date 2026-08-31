@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: Arial, sans-serif; color: #222; }
+
+header {
+    background-color: #22313f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1a252f;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover { text-decoration: underline; }
+
+section {
+    padding: 60px 10%;
+    color: white;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Linear gradient section */
+.gradient-section {
+    background: linear-gradient(135deg, #4a90d9, #22313f);
+}
+
+/* Radial gradient section */
+.radial-section {
+    background: radial-gradient(circle at center, #d97a4a, #22313f);
+}
+
+/* Parallax-like fixed background sections */
+.parallax-section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parallax-section.one {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1200/800?random=1');
+}
+
+.parallax-section.two {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1200/800?random=2');
+}
+
+footer {
+    text-align: center;
+    background-color: #22313f;
+    color: white;
+    padding: 20px;
+}
