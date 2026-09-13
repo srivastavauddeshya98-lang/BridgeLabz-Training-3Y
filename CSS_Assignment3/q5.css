@@ -1,0 +1,22 @@
+* { font-family: Arial, sans-serif; }
+body { margin: 0; padding: 20px; background: #f9f9f9; }
+header { text-align: center; padding: 15px; background: #2c3e50; color: #fff; margin: -20px -20px 20px -20px; }
+
+/* Attribute selectors */
+input[type="text"] { border: 2px solid #3498db; } /* text inputs only */
+a[href^="https"] { color: green; font-weight: bold; } /* secure links */
+
+/* Pseudo-classes */
+.item-list li:hover { background: #dfe6e9; }
+.item-list li:nth-child(odd) { background: #ecf0f1; }
+input:focus { outline: 3px solid #f39c12; }
+
+/* Pseudo-elements */
+.item-list li::before { content: "➤ "; color: #3498db; }
+.item-list li::after { content: " ✓"; color: #27ae60; }
+
+/* Combinators */
+.combinator-demo > span { color: #e67e22; }         /* direct child */
+.combinator-demo p + p { color: #8e44ad; }           /* adjacent sibling */
+.combinator-demo p ~ p { font-style: italic; }       /* general sibling */
+main p { line-height: 1.6; }                         /* descendant */

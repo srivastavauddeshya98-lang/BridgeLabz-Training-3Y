@@ -1,0 +1,32 @@
+/* Basic reset and layout */
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f4f6f8; color: #222; }
+header, footer { text-align: center; padding: 15px; background: #2c3e50; color: #fff; }
+
+/* Flexbox row to align boxes horizontally */
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.box {
+  width: 180px;
+  text-align: center;
+  background: #fff;
+  transition: border-color 0.4s ease; /* smooth hover transition */
+}
+
+/* Different border styles */
+.solid   { border: 4px solid #3498db; padding: 10px; }
+.dashed  { border: 4px dashed #e67e22; padding: 20px; }
+.double  { border: 6px double #8e44ad; padding: 30px; }
+.groove  { border: 6px groove #27ae60; padding: 15px; border-radius: 20px; }
+
+/* Hover effect changes border color */
+.solid:hover  { border-color: #e74c3c; }
+.dashed:hover { border-color: #2ecc71; }
+.double:hover { border-color: #f1c40f; }
+.groove:hover { border-color: #2980b9; }

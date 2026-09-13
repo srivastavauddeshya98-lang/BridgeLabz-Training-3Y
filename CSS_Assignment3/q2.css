@@ -1,0 +1,46 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; }
+header { text-align: center; padding: 15px; background: #2c3e50; color: #fff; }
+
+/* Center boxes vertically and horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 80vh; /* min-height demo */
+  padding: 20px;
+  flex-wrap: wrap;
+  background: #ecf0f1;
+}
+
+.box {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* overflow demo */
+}
+
+/* px units */
+.box-px {
+  width: 200px;
+  height: 100px;
+  background: #e74c3c;
+}
+
+/* percentage width */
+.box-percent {
+  width: 50%;
+  max-width: 300px; /* max-width demo */
+  height: 100px;
+  background: #3498db;
+}
+
+/* vh and em units */
+.box-vh-em {
+  width: 10em;
+  height: 30vh;
+  background: #27ae60;
+}

@@ -1,0 +1,38 @@
+body { margin: 0; background: #f4f6f8; font-family: Arial, sans-serif; }
+header { text-align: center; padding: 15px; background: #2c3e50; color: #fff; }
+
+.demo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  min-height: 70vh;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.model {
+  text-align: center;
+}
+
+/* Margin layer (outermost, shown via outline on parent) */
+.model .content {
+  width: 150px;
+  padding: 20px;   /* padding layer */
+  border: 8px solid #e67e22; /* border layer */
+  margin: 20px;    /* margin layer */
+  background: #3498db; /* content layer color */
+  outline: 2px dashed #7f8c8d; /* marks the margin boundary */
+  color: #fff;
+}
+
+/* Default box-sizing: content-box -> width grows with padding/border */
+.default-box .content {
+  box-sizing: content-box;
+}
+
+/* border-box -> padding/border included within declared width */
+.border-box-model .content {
+  box-sizing: border-box;
+  background: #27ae60;
+}
