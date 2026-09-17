@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #e2e8f0;
+}
+
+header, footer {
+    padding: 20px;
+    text-align: center;
+    background: #1e293b;
+    color: white;
+}
+
+main {
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.card {
+    width: 700px;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+.card img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.content {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: 3px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.reset {
+    background: #64748b;
+}
+
+.reset:hover {
+    background: #475569;
+}
+
+@media (max-width: 700px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+    }
+}

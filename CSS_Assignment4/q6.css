@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+}
+
+header, footer {
+    padding: 20px;
+    text-align: center;
+    background: #172554;
+    color: white;
+}
+
+.animations {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    overflow: hidden;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: move 3s ease-in-out infinite alternate;
+}
+
+.ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: bounce 1s ease-in-out infinite alternate;
+    animation-delay: 0.5s;
+}
+
+.color-text {
+    animation: colorChange 3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    from { transform: translateX(-80px); }
+    to { transform: translateX(80px); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(-50px); }
+    to { transform: translateY(50px); }
+}
+
+@keyframes colorChange {
+    0% { color: #2563eb; }
+    50% { color: #dc2626; }
+    100% { color: #16a34a; }
+}
