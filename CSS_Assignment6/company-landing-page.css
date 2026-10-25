@@ -1,0 +1,4 @@
+/* Q1: Company Landing Page - only the custom parts, Bootstrap does the rest */
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+}

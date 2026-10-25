@@ -1,0 +1,38 @@
+/* Q5: Custom theme - override Bootstrap's CSS variables */
+:root {
+  --bs-primary: #0f766e;
+  --bs-primary-rgb: 15, 118, 110;
+  --bs-body-font-family: 'Poppins', sans-serif;
+  --bs-body-bg: #f0fdfa;
+}
+
+/* Headings use the theme color */
+h1, h2, h3, h4, .card-title {
+  color: var(--bs-primary);
+  font-weight: 700;
+}
+
+/* Header and footer keep white text on the theme color */
+.theme-header {
+  background-color: var(--bs-primary);
+}
+
+.theme-header h1 {
+  color: #fff;
+}
+
+/* Buttons use the theme color (Bootstrap 5.3 button variables) */
+.btn-primary {
+  --bs-btn-bg: #0f766e;
+  --bs-btn-border-color: #0f766e;
+  --bs-btn-hover-bg: #115e59;
+  --bs-btn-hover-border-color: #115e59;
+  --bs-btn-active-bg: #134e4a;
+  --bs-btn-active-border-color: #134e4a;
+}
+
+/* Cards get a themed top border */
+.card {
+  border: 0;
+  border-top: 4px solid var(--bs-primary);
+}
