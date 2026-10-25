@@ -1,0 +1,88 @@
+/* Q6: Responsive CSS Cheat Sheet */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f8;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+main {
+  padding: 0 20px 40px;
+}
+
+/* Large screens: 3 columns */
+.sheet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  border-top: 4px solid #1f3a5f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  background: #e8eef7;
+}
+
+.box h2 {
+  margin-bottom: 10px;
+  color: #1f3a5f;
+}
+
+code {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+  background: #272822;
+  color: #a6e22e;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+/* Medium screens: 2 columns */
+@media (max-width: 1000px) {
+  .sheet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Below 700px: stacked rows, heading is the key, text is the value */
+@media (max-width: 700px) {
+  .sheet {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .box {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 15px;
+    border-top: none;
+    border-left: 4px solid #1f3a5f;
+  }
+
+  .box h2 {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+}

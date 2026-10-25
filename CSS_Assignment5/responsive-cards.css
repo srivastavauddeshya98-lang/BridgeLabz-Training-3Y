@@ -1,0 +1,59 @@
+/* Q3: Responsive Cards with Media Queries */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f8;
+}
+
+header {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+main {
+  padding: 0 20px 40px;
+}
+
+/* Wrapping flex row with equal spacing between cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Desktop: 4 columns (width minus 3 gaps, divided by 4) */
+.card {
+  flex: 0 0 calc((100% - 60px) / 4);
+  padding: 30px 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+  background: #1f3a5f;
+  color: #fff;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}

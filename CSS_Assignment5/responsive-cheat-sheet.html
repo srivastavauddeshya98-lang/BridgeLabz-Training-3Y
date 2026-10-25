@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Cheat Sheet</title>
+  <link rel="stylesheet" href="responsive-cheat-sheet.css">
+</head>
+<body>
+  <header>
+    <h1>Responsive CSS Cheat Sheet</h1>
+  </header>
+  <main>
+    <section class="sheet">
+      <article class="box">
+        <h2>Filters</h2>
+        <div class="value">
+          <p>Apply visual effects such as blur or grayscale.</p>
+          <code>img { filter: grayscale(100%); }</code>
+        </div>
+      </article>
+      <article class="box">
+        <h2>Media Queries</h2>
+        <div class="value">
+          <p>Apply styles only when a screen condition is true.</p>
+          <code>@media (max-width: 700px) { ... }</code>
+        </div>
+      </article>
+      <article class="box">
+        <h2>Responsive Design</h2>
+        <div class="value">
+          <p>Layouts that adapt to any screen size.</p>
+          <code>repeat(auto-fit, minmax(200px, 1fr))</code>
+        </div>
+      </article>
+      <article class="box">
+        <h2>Typography</h2>
+        <div class="value">
+          <p>Text that scales with the viewport.</p>
+          <code>font-size: clamp(1rem, 2vw, 1.5rem);</code>
+        </div>
+      </article>
+      <article class="box">
+        <h2>Flexbox</h2>
+        <div class="value">
+          <p>One-dimensional layout for rows or columns.</p>
+          <code>display: flex; gap: 20px;</code>
+        </div>
+      </article>
+      <article class="box">
+        <h2>Transitions</h2>
+        <div class="value">
+          <p>Animate a property change smoothly.</p>
+          <code>transition: transform 0.3s ease;</code>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

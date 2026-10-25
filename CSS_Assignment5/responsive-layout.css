@@ -1,0 +1,75 @@
+/* Q2: Responsive Web Design Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Column flex on body keeps the footer at the bottom */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo on the left, links on the right */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1f3a5f;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Three feature boxes in a row */
+main {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 40px 30px;
+}
+
+.feature {
+  flex: 1;
+  padding: 30px 20px;
+  text-align: center;
+  background: #e8eef7;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+/* Footer centered at the bottom */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1f3a5f;
+  color: #fff;
+}
+
+/* Below 750px: stack the boxes */
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+  }
+}

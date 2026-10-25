@@ -1,0 +1,49 @@
+/* Q4: Responsive Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #fdf8f0;
+  color: #2b2b2b;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* clamp(minimum, preferred, maximum) */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+}
+
+/* Below 700px: looser line-height and tighter spacing */
+@media (max-width: 700px) {
+  .intro {
+    margin: 30px 15px;
+    padding: 25px 18px;
+  }
+
+  h1 {
+    margin-bottom: 14px;
+  }
+
+  p {
+    line-height: 1.9;
+  }
+}
