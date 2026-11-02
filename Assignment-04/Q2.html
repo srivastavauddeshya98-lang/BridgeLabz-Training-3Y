@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form Validator</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f8; }
+    form { max-width: 400px; margin: 40px auto; padding: 25px; background: #fff; border-radius: 8px; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input { width: 100%; padding: 8px; margin-top: 5px; border: 2px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    input.valid { border-color: green; }
+    input.invalid { border-color: red; }
+    .error { color: red; font-size: 0.85rem; min-height: 1em; }
+    button { margin-top: 15px; padding: 10px 20px; }
+    #result { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <form id="studentForm" novalidate>
+    <h2>Student Registration</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+    <span class="error" id="nameError"></span>
+
+    <label for="email">Email</label>
+    <input type="text" id="email">
+    <span class="error" id="emailError"></span>
+
+    <label for="phone">Phone</label>
+    <input type="text" id="phone">
+    <span class="error" id="phoneError"></span>
+
+    <label for="password">Password</label>
+    <input type="password" id="password">
+    <span class="error" id="passwordError"></span>
+
+    <button type="submit">Register</button>
+    <p id="result"></p>
+  </form>
+  <script src="Q2.js"></script>
+</body>
+</html>
